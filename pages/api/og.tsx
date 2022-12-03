@@ -26,7 +26,9 @@ export default async function handler(req: NextRequest) {
         tw="flex flex-col justify-center items-center w-full h-full"
         style={{
           backgroundImage: `url('https://advent-of-tiles.vercel.app/${
-            [2015, 2017, 2018, 2019].includes(Number(year)) ? year : 2015
+            [2015, 2017, 2018, 2019, 2021, 2022].includes(Number(year))
+              ? year
+              : 2015
           }${Number(day) % 2 ? "-even" : "-odd"}${
             !dayData ? "-disabled" : ""
           }.svg')`,
