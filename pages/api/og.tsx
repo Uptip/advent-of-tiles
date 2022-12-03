@@ -25,9 +25,11 @@ export default async function handler(req: NextRequest) {
       <div
         tw="flex flex-col justify-center items-center w-full h-full"
         style={{
-          backgroundImage: `url('https://advent-of-tiles.vercel.app/2022${
-            Number(day) % 2 ? "-even" : "-odd"
-          }${!dayData ? "-disabled" : ""}.svg')`,
+          backgroundImage: `url('http://localhost:3000/${
+            [2015, 2017, 2018, 2019].includes(Number(year)) ? year : 2015
+          }${Number(day) % 2 ? "-even" : "-odd"}${
+            !dayData ? "-disabled" : ""
+          }.svg')`,
           fontFamily: "Bebas",
         }}
       >
